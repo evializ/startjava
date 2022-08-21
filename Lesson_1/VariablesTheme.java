@@ -14,6 +14,7 @@ public class VariablesTheme {
             System.out.println("Мой компьютер собран на базе процессора Intel" + sym + " Core i3, имеет " + core + " ядра, тактовой частотой " + freqCpu + " ГГц." + "\n" +
                     "В нём установлено " + sizeRam + " Гб оперативной памяти, " + numberHdd + " жестких диска (общий объем " + sizeHdd + " Гб).");
         }
+        
         System.out.println("\n2. Расчет стоимости товара со скидкой");
         int pricePen = 100;
         int priceBook = 200;
@@ -21,11 +22,13 @@ public class VariablesTheme {
         double cost = (pricePen + priceBook) - discount;
         System.out.println("Сумма скидки будет равна " + discount + " руб.");
         System.out.println("Общая стоимость покупки с учётом скидки " + cost + " руб.");
+        
         System.out.println("\n3. Вывод на консоль слова JAVA");
         System.out.println("   J    a  v     v  a");
         System.out.println("   J   a a  v   v  a a ");
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
+        
         System.out.println("\n4. Отображение min и max значений числовых типов данных");
         byte by = 127;
         short sh = 32_767;
@@ -51,6 +54,7 @@ public class VariablesTheme {
         System.out.println(ln);
         ln--;
         System.out.println(ln);
+        
         System.out.println("\n5. Перестановка значений переменных");
         int a = 2;
         int b = 5;
@@ -79,6 +83,7 @@ public class VariablesTheme {
         a = a ^ b;
         System.out.println("Новое значение переменной а: " + a);
         System.out.println("Новое значение переменной b: " + b);
+        
         System.out.println("\n6. Вывод символов и их кодов");
         char chA = 35;
         char chB = 38;
@@ -90,6 +95,7 @@ public class VariablesTheme {
         System.out.println("Код символа 64 - " + chC);
         System.out.println("Код символа 94 - " + chD);
         System.out.println("Код символа 95 - " + undLine);
+        
         System.out.println("\n7. Отображение количества сотен, десятков и единиц числа");
         int num1 = 123;
         int x = num1 / 100;
@@ -99,6 +105,7 @@ public class VariablesTheme {
                 "\nI. " + x + " сотен" +
                 "\nII. " + y + " десятков" +
                 "\nIII. " + z + " единиц");
+        
         System.out.println("\n8. Вывод на консоль ASCII-арт Дюка");
         char dashR = '/';
         char dashL = '\\';
@@ -110,6 +117,7 @@ public class VariablesTheme {
                 "\n" + whSp + whSp + dashR + undLine + bracketL + whSp + bracketR + dashL +
                 "\n" + whSp + dashR + whSp +  whSp +  whSp + whSp + whSp + whSp + dashL +
                 "\n" + dashR + undLine + undLine + undLine + undLine + dashR + dashL + undLine + undLine + dashL);
+        
         System.out.println("\n9. Произведение и сумма цифр числа");
         int num2 = 345;
         x = num2 / 100;
@@ -119,6 +127,7 @@ public class VariablesTheme {
         int prod = x * y * z;
         System.out.println("I. Сумма цифр числа " + num2 + " = " + sum);
         System.out.println("II. Произведение цифр числа " + num2 + " = " + prod);
+        
         System.out.println("\n10. Преобразование секунд");
         int num3 = 86399;
         int hours = num3 / 3600;
