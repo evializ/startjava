@@ -1,5 +1,3 @@
-import java.lang.*;
-
 public class IfElseStatementTheme {
 
     public static void main(String[] args) {
@@ -37,27 +35,24 @@ public class IfElseStatementTheme {
         int num2 = 13;
         if(num1 > num2) {
             System.out.println("Число " + num1 + "больше числа " + num2);
-        } else if(num1 == num2) {
-            System.out.println("Числа " + num1 + " и " + num2 + " равны");
-        } else {
+        } else if(num1 < num2) {
             System.out.println("Число " + num2 + " больше числа " + num1);
+        } else {
+            System.out.println("Числа " + num1 + " и " + num2 + " равны");
         }
 
         System.out.println("\n3. Работа с числом");
         int num3 = -8;
+        if ((num3 % 2) == 0) {
+            System.out.println("Число является чётным.");
+        } else {
+            System.out.println("Число является нечётным");
+        }
         if(num3 != 0) {
-            if((num3 % 2) == 0) {
-                if(num3 > 0) {
-                    System.out.println("Число " + num3 + " является чётным и положительным.");
-                } else {
-                    System.out.println("Число " + num3 + " является чётным и отрицательным.");
-                }
+            if(num3 > 0) {
+                System.out.println("Число " + num3 + " положительное.");
             } else {
-                if(num3 > 0) {
-                    System.out.println("Число " + num3 + " является нечётным и положительным.");
-                } else {
-                    System.out.println("Число " + num3 + " является нечётным и отрицательным.");
-                }
+                System.out.println("Число " + num3 + " отрицательное.");
             }
         } else {
             System.out.println("Число равно нулю.");
@@ -68,8 +63,8 @@ public class IfElseStatementTheme {
         num2 = 247;
         System.out.println("Первое число = " + num1 + "\n" +
                 "Второе число = " + num2);
-        int a1 = num1 / 100;
-        int a2 = num2 / 100;
+        int a1 = num1 % 10;
+        int a2 = num2 % 10;
         if(a1 == a2) {
             System.out.println("Цифра " + a1 + " одинакова в обоих числах." + "\n" +
                     " и находится в 1 разряде");
@@ -80,8 +75,8 @@ public class IfElseStatementTheme {
             System.out.println("Цифра " + b1 + " одинакова в обоих числах." + "\n" +
                     " и находится во 2 разряде");
         }
-        int c1 = num1 % 10;
-        int c2 = num2 % 10;
+        int c1 = num1 / 100;
+        int c2 = num2 / 100;
         if(c1 == c2) {
             System.out.println("Цифра " + c1 + " одинакова в обоих числах." + "\n" +
                     " и находится в 3 разряде");
@@ -108,19 +103,15 @@ public class IfElseStatementTheme {
         if(deposit < 100_000) {
             interest = deposit * 0.05;
             depositInterest = deposit + interest;
-            System.out.println("Начисленный процент = " + (int) interest + " руб." + "\n" +
-                    "Итоговая сумма вклада = " + (int) depositInterest + " руб.");
         } else if(deposit >= 100_000 && deposit >= 300_000) {
             interest = deposit * 0.07;
             depositInterest = deposit + interest;
-            System.out.println("Начисленный процент = " + (int) interest + " руб." + "\n" +
-                    "Итоговая сумма вклада = " + (int) depositInterest + " руб.");
         } else if(deposit > 300_000) {
             interest = deposit * 0.1;
             depositInterest = deposit + interest;
-            System.out.println("Начисленный процент = " + (int) interest + " руб." + "\n" +
-                    "Итоговая сумма вклада = " + (int) depositInterest + " руб.");
         }
+        System.out.println("Начисленный процент = " + (int) interest + " руб." + "\n" +
+                "Итоговая сумма вклада = " + (int) depositInterest + " руб.");
 
         System.out.println("\n7. Определение оценки по предметам");
         int historyInterest = 59;
@@ -133,7 +124,7 @@ public class IfElseStatementTheme {
             historyScore = 4;
         } else if(historyInterest > 60) {
             historyScore = 3;
-        } else if(historyInterest <=60) {
+        } else if(historyInterest <= 60) {
             historyScore = 2;
         }
         if(programmingInterest > 91) {
@@ -142,7 +133,7 @@ public class IfElseStatementTheme {
             programmingScore = 4;
         } else if(programmingInterest > 60) {
             programmingScore = 3;
-        } else if(programmingInterest <=60) {
+        } else if(programmingInterest <= 60) {
             programmingScore = 2;
         }
         System.out.println("Оценка " + historyScore + " по Истории" + "\n" +
@@ -156,7 +147,7 @@ public class IfElseStatementTheme {
         int rentPremises = 5000;
         int averageSales = 13000;
         int costPrice = 9000;
-        int annualRevenue = (averageSales * 12) - (costPrice * 12) - (rentPremises * 12);
+        int annualRevenue = (averageSales - costPrice - rentPremises) * 12;
         if(annualRevenue > 0) {
             System.out.println("Прибыль за год: +" + annualRevenue);
         } else {
@@ -165,20 +156,20 @@ public class IfElseStatementTheme {
 
         System.out.println("\n9. Подсчет количества банкнот");
         deposit = 567;
-        a1 = deposit / 100;
-        b1 = (deposit / 10) % 10;
-        c1 = deposit % 10;
+        int banknote100 = deposit / 100;
+        int banknote10 = (deposit / 10) % 10;
+        int banknote1 = deposit % 10;
         int x = 0;
-        if(b1 > 5) {
-            x = (b1 - 5) * 10;
-            b1 = 5;
-            c1 += x;
+        if(banknote10 > 5) {
+            x = (banknote10 - 5) * 10;
+            banknote10 = 5;
+            banknote1 += x;
         }
-        int depositTest = (a1 * 100) + (b1 * 10) + c1;
+        int depositTest = (banknote100 * 100) + (banknote10 * 10) + banknote1;
         System.out.println("Банкомат выдал:" + "\n" +
-                "Номиналом 100 USD - " + a1 + " банкнот," + "\n" +
-                "Номиналом 10 USD - " + b1 + " банкнот," + "\n" +
-                "Номиналом 1 USD - " + c1 + " банкнот." + "\n" +
+                "Номиналом 100 USD - " + banknote100 + " банкнот," + "\n" +
+                "Номиналом 10 USD - " + banknote10 + " банкнот," + "\n" +
+                "Номиналом 1 USD - " + banknote1 + " банкнот." + "\n" +
                 "Итого банкоматом выдано " + depositTest + " USD.");
     }
 }
