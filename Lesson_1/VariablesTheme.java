@@ -76,11 +76,11 @@ public class VariablesTheme {
         char codeC = 64;
         char codeD = 94;
         char undLine = 95;
-        System.out.println("Код символа " + (int)codeA + " - " + codeA + "\n" +
-                "Код символа " + (int)codeB + " - " + codeB + "\n" +
-                "Код символа " + (int)codeC + " - " + codeC + "\n" +
-                "Код символа " + (int)codeD + " - " + codeD + "\n" +
-                "Код символа " + (int)undLine + " - " + undLine);
+        System.out.println("Код символа " + (int) codeA + " - " + codeA + "\n" +
+                "Код символа " + (int) codeB + " - " + codeB + "\n" +
+                "Код символа " + (int) codeC + " - " + codeC + "\n" +
+                "Код символа " + (int) codeD + " - " + codeD + "\n" +
+                "Код символа " + (int) undLine + " - " + undLine);
 
         System.out.println("\n7. Отображение количества сотен, десятков и единиц числа");
         int num1 = 123;
